@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Be My Valentine? 💘</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffb6c1, #ffe1ec);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Floating hearts */
+.heart {
+  position: fixed;
+  bottom: -30px;
+  animation: floatUp 9s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0); }
+  to { transform: translateY(-130vh); }
+}
+
+/* Cupid */
+.cupid {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 46px;
+  animation: cupidFloat 4s ease-in-out infinite;
+  z-index: 10;
+}
+
+@keyframes cupidFloat {
+  0%,100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -15px); }
+}
+
+/* BIG ANGLED PHOTOS */
+.photo {
+  position: fixed;
+  width: 180px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow:
+    0 25px 45px rgba(0,0,0,0.3),
+    0 0 30px rgba(255,105,180,0.35);
+  animation: photoDrift 10s ease-in-out infinite;
+  z-index: 2;
+}
+
+/* Creative placement */
+.photo.one {
+  top: 10%;
+  left: 5%;
+  transform: rotate(-12deg);
+  animation-delay: 0s;
+}
+
+.photo.two {
+  top: 55%;
+  left: 8%;
+  transform: rotate(8deg);
+  animation-delay: 2s;
+}
+
+.photo.three {
+  top: 18%;
+  right: 6%;
+  transform: rotate(10deg);
+  animation-delay: 1s;
+}
+
+.photo.four {
+  top: 60%;
+  right: 10%;
+  transform: rotate(-9deg);
+  animation-delay: 3s;
+}
+
+@keyframes photoDrift {
+  0%,100% { transform: translateY(0) rotate(var(--rot)); }
+  50% { transform: translateY(-28px) rotate(calc(var(--rot) + 2deg)); }
+}
+
+/* Pages */
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.hidden { display: none; }
+
+/* Card */
+.card {
+  background: white;
+  border-radius: 32px;
+  padding: 50px 38px;
+  max-width: 460px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 30px 55px rgba(0,0,0,0.18);
+  z-index: 5;
+}
+
+.card h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 38px;
+  color: #ff5c8a;
+  margin-bottom: 25px;
+}
+
+/* Drop cap */
+.love-text::first-letter {
+  font-family: 'Playfair Display', serif;
+  font-size: 54px;
+  color: #ff5c8a;
+}
+
+.love-text {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+/* Question */
+.question {
+  font-size: 23px;
+  font-weight: 600;
+  color: #ff4f7b;
+  margin-bottom: 32px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+}
+
+button {
+  padding: 20px 36px;
+  font-size: 19px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.yes {
+  background: linear-gradient(135deg, #ff4f7b, #ff8fab);
+  color: white;
+  box-shadow: 0 12px 25px rgba(255,79,123,0.45);
+}
+
+.yes:hover { transform: scale(1.12); }
+
+.no {
+  background: #f2f2f2;
+  color: #777;
+}
+
+/* Celebration page */
+#page2 {
+  background: linear-gradient(135deg, #ffd1dc, #ffeaf2);
+}
+
+.celebrate-card {
+  background: white;
+  border-radius: 34px;
+  padding: 55px 45px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 30px 55px rgba(0,0,0,0.18);
+}
+
+.celebrate-card h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 42px;
+  color: #ff4f7b;
+  margin-bottom: 26px;
+}
+
+.big-love-text {
+  font-size: 17px;
+  line-height: 1.9;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Cupid -->
+<div class="cupid">💘🪽</div>
+
+<!-- BIG CREATIVE PHOTOS -->
+<img src="her1.jpg" class="photo one" style="--rot:-12deg;">
+<img src="her2.jpg" class="photo two" style="--rot:8deg;">
+<img src="her3.jpg" class="photo three" style="--rot:10deg;">
+<img src="her4.jpg" class="photo four" style="--rot:-9deg;">
+
+<!-- PAGE 1 -->
+<section id="page1" class="page">
+  <div class="card">
+    <h1>Hi Idiot 💕</h1>
+
+    <p class="love-text">
+      I don’t think I ever fully realized how deeply a story can shape someone until I lived ours. I know our story is not just happy moments, but the quiet ones, the broken ones, the moments where nothing made sense and yet everything mattered. I know how we found each other in a way that felt almost accidental, and how slowly that accident became something important, something real, something that changed me.
+
+I know how loving you wasn’t always easy, but it was always honest. From the very beginning, there was something about you that stayed with me—something I couldn’t shake off, even when I tried to convince myself to move forward, even when time passed and life kept pulling us in different directions. You were never just a chapter I closed. You were a sentence that kept repeating in my heart, quietly, patiently, waiting to be understood.
+
+I know how much I love you—not in a loud or dramatic way, but in the kind that stays. The kind that learns, that waits, that grows softer and stronger at the same time. Loving you taught me appreciation in ways I never understood before. I learned to appreciate the small things.
+
+ the way conversations could feel like home, the comfort of being seen without needing to explain myself, the simple peace of knowing someone mattered to me more than my own pride.
+
+I am so grateful for everything we went through—every laugh, every misunderstanding, every moment of distance that hurt more than I ever admitted. Even the painful parts mattered, because they shaped who I am now. They taught me patience. They taught me humility. They taught me that love isn’t about possession or certainty, but about sincerity and care, even when things are unclear.
+
+What I’m most grateful for—what I never take lightly—is that I get to love you again. Not everyone gets that chance. Not everyone gets to come back to a feeling with more understanding, more honesty, and a deeper heart. Loving you again feels different—not rushed, not desperate, not driven by fear—but grounded. It feels like choosing you with open eyes, knowing the past, respecting it, and still deciding that you matter.
+
+I appreciate you more than words can explain. I appreciate your presence in my life, whether close or distant. I appreciate the way you’ve shaped my thoughts, my growth, my ability to care more deeply. You’ve changed me in quiet ways—ways that don’t disappear just because time moves on.
+
+This love isn’t about pressure or expectation. It’s not about needing anything in return. It’s simply about gratitude. Gratitude that our paths crossed. Gratitude that I got to feel something real. Gratitude that even now, I can say with honesty that loving you has been one of the most meaningful experiences of my life.
+
+On this Valentine’s Day, I just want you to know that this love comes from respect, from appreciation, and from a heart that is thankful. Thankful for the past we shared, thankful for the lessons we learned, and thankful that I am still allowed to care for you in a way that feels true to who I am now.
+    </p>
+
+    <p class="question">Will you be my Valentine? 💌</p>
+
+    <div class="buttons">
+      <button class="yes" onclick="yesClicked()">Yes 💖</button>
+      <button class="no" onmouseover="moveNo()">No 🙈</button>w
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 2 -->
+<section id="page2" class="page hidden">
+  <div class="celebrate-card">
+    <h1>Thank you my loveee (idiot)</h1>
+
+    <p class="big-love-text">
+    I’m really happy. Truly. Knowing that you accepted my Valentine means more to me than I can properly put into words. It feels like my heart can finally breathe a little easier, like something gentle and beautiful just settled into place.
+
+I love you. I love you in a way that feels calm, sincere, and full of gratitude. I love you for who you are, for everything we’ve shared, and for the simple fact that I get to feel this again. There’s so much happiness in just being able to say that honestly.
+
+Thank you for choosing to be here with me in this moment. Thank you for trusting me with your yes. I don’t take it lightly at all. Today just feels brighter knowing I get to love you.
+
+Happy Valentine’s Day idiot 💞
+    </p>w
+  </div>
+</section>
+
+<!-- Soft click -->
+<audio id="clickSound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_1a5e4c8e9c.mp3"></audio>
+
+<!-- Gentle background music -->
+<audio autoplay loop volume="0.3">
+  <source src="https://cdn.pixabay.com/audio/2023/03/30/audio_5e82b0b47b.mp3">
+</audio>
+
+<script>
+function yesClicked() {
+  document.getElementById("clickSound").play();
+  document.getElementById("page1").classList.add("hidden");
+  document.getElementById("page2").classList.remove("hidden");
+}
+
+function moveNo() {
+  const btn = document.querySelector(".no");
+  btn.style.transform = `translate(${Math.random()*160-80}px, ${Math.random()*100-50}px)`;
+}
+
+/* Floating hearts */
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerText = "💖";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = Math.random() * 22 + 14 + "px";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 9000);
+}, 600);
+</script>
+
+</body>
+</html>
+
